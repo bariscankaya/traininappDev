@@ -23,6 +23,7 @@ spec:
         ports:
         - containerPort: 80
         resources: {}
+        imagePullPolicy: Always
 status: {}
 
 apiVersion: v1
