@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: finaldep
+  name: finaldep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: finaldep
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: finaldep
+    spec:
+      containers:
+      - image: docker.io/barisdocker2/training_app:v1
+        name: training-app-cd
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
+
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: finaldep
+  name: finalsvc
+spec:
+  ports:
+  - port: 1258
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: finaldep
+  type: NodePort
+status:
+  loadBalancer: {}
+root@client:~#
