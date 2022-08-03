@@ -42,4 +42,3 @@ spec:
   type: NodePort
 status:
   loadBalancer: {}
-root@client:~#
