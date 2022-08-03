@@ -26,6 +26,8 @@ spec:
         imagePullPolicy: Always
 status: {}
 
+##sdfsdf 
+---
 apiVersion: v1
 kind: Service
 metadata:
