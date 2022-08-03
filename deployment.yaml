@@ -26,7 +26,7 @@ spec:
         imagePullPolicy: Always
 status: {}
 
-##sdfsdf 
+##Expose the deployment with NodePort Service
 ---
 apiVersion: v1
 kind: Service
